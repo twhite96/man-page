@@ -1,15 +1,3 @@
-
-import mockDirs from "./modules/filesystem.js";
-
-// instatiates the filesystem and sets the current directory and files.
-const lesson1 = mockDirs();
-
-const cmdInput = document.querySelector("#cmdInput");
-const inputArea = document.querySelector("#inputArea");
-const lastLogin = document.querySelector(".lastLogin");
-const terminal = document.querySelector("#terminal");
-const workingDir = document.querySelector(".workingDir");
-
 function scroll_up() {
   window.scrollBy(0, -20);
 }
@@ -31,14 +19,14 @@ function handle_scroll() {
   const line_counter = document.getElementById("line-counter");
   let scroll_percent = Math.ceil(calc_scroll_percent(scroll_pos));
   if (scroll_percent == 100) {
-    line_counter.innerHTML = "&nbsp;Manual page orhun(1) (END)";
+    line_counter.innerHTML = "&nbsp;Manual page tiff(1) (END)";
     line_counter.style.filter = "invert(0%)";
   } else {
     if (isNaN(scroll_percent)) {
       scroll_percent = 0;
     }
     line_counter.innerHTML =
-      "&nbsp;Manual page orhun(1) " + scroll_percent + "%";
+      "&nbsp;Manual page tiff(1) " + scroll_percent + "%";
     line_counter.style.filter = "invert(0%)";
   }
   // line_counter.innerHTML += " (press h for help)";
